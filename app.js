@@ -5,7 +5,7 @@ const forcast = require('./apis/forcast')
 const geolocation = require('./apis/geolocation')
 
 const app = express()
-const port = 
+const port = process.env.PORT || 8080
 console.log(path.join(__dirname, 'public'))
 app.use(express.static(path.join(__dirname, 'public')))
 
@@ -65,6 +65,6 @@ app.get('/jk', function(req, res){
 
 
 
-app.listen(8080,()=>{
-    console.log('server listening on port 8080')
+app.listen(port,()=>{
+    console.log(`server listening on port ${port}`)
 })

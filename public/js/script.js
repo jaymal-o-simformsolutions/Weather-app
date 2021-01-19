@@ -8,7 +8,7 @@
  form.addEventListener('submit',(e)=>{
      e.preventDefault()
      const data = input.value
-     fetch(`http://localhost:8080/weather?adderess=${data}`).then(res=>{
+     fetch(`/weather?adderess=${data}`).then(res=>{
         return res.json();
     }).then(data=>{
      
